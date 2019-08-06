@@ -1,0 +1,99 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.46359238405091097 0.8642656906596555 0.19526115179057424 0.874674679674262
+  position 1.4485760135767394 0.6723237364279866 1.3961765271710962
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1.01 1.01
+}
+Solid {
+  translation 0 0.025 0.505
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+}
+Solid {
+  translation 0 0.025 -0.505
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.505 0.025 0
+  rotation 0 1 0 1.5708003061004252
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.505 0.025 0
+  rotation 0 1 0 1.5707996938995747
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+}
+E-puck {
+  name "robot1"
+  controller "e-puck_avoid_collision"
+}
+E-puck {
+  name "robot2"
+  controller "e-puck_avoid_collision"
+  translation 0.25 0.0 0.25
+  rotation 0 -1 0 0.0916297857297021
+}
+WoodenBox {
+  translation -0.41912421325119464 0.04999999999999978 -0.3844799190157846
+  rotation 0 -1 0 0.0916297857297021
+  size 0.1 0.1 0.1
+  mass 1
+}
+Solid {
+  translation 0.25 0.1 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+}

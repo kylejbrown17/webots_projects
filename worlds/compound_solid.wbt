@@ -1,0 +1,175 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.7147272961144722 0.6770614047402294 0.1753646098848997 0.7127932338478636
+  position 0.8518171948625377 1.0720757344459786 1.4741288224621063
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  size 1.01 1.01
+}
+Solid {
+  translation -9.773165531335664e-10 0.024901900019527617 0.5050000074185452
+  rotation -0.00753156281861697 0.9999716200450773 0.0001861878963736099 5.5263030513836496e-08
+  children [
+    DEF WALL_SHAPE Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Box {
+        size 1 0.05 0.01
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+  linearVelocity 4.0226037976688936e-12 -3.0586755855112997e-10 1.5497961181350787e-10
+  angularVelocity 6.1990688062881114e-09 -2.94978630554368e-18 -1.6090099470160077e-10
+}
+Solid {
+  translation 1.0866667680948781e-11 0.024901900019499167 -0.5049999977028599
+  rotation -0.046552237220702106 0.9989158346402954 0.00021098490377443262 4.821569894301015e-08
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(2)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+  linearVelocity 3.977068913586955e-12 -3.0542193452588153e-10 8.357636992402209e-10
+  angularVelocity 3.342992590072742e-08 6.218976399229657e-18 -1.590796098234358e-10
+}
+Solid {
+  translation 0.505000006597743 0.024901900019448288 -8.795011575128908e-10
+  rotation -7.532274676522723e-10 1 7.634935961964174e-10 1.5708003642294044
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(3)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+  linearVelocity 5.64756457493999e-10 -3.0462496171582116e-10 -4.014629437293359e-12
+  angularVelocity -1.6058212662987886e-10 3.0031161401143314e-18 -2.2589837777842872e-08
+}
+Solid {
+  translation -0.5050000010196117 0.024901900019517212 -4.214853176328347e-09
+  rotation -1.5946457152812961e-09 1 1.6046961238650876e-09 1.570799735561069
+  children [
+    USE WALL_SHAPE
+  ]
+  name "solid(4)"
+  boundingObject USE WALL_SHAPE
+  physics Physics {
+  }
+  linearVelocity 1.191285617512997e-09 -3.057046170903233e-10 -3.931137435576931e-12
+  angularVelocity -1.5724240326936937e-10 3.3920478673801904e-18 -4.765053765154945e-08
+}
+E-puck {
+  hidden position_0_0 3.4156509615266737
+  hidden position_0_1 3.014006607735486
+  hidden linearVelocity_0 0.009212367201024816 -6.56517025246228e-06 -0.06214350470918147
+  hidden angularVelocity_0 -0.005313572530016032 0.0018894768095887352 -0.00025481846126079076
+  hidden rotation_1 -1 0 0 3.4156509615266737
+  hidden rotation_2 -0.9999999999999999 0 0 3.014006607735486
+  translation 0.003685929013036701 -3.479204249738632e-05 -0.06409511844567183
+  rotation 0.010996114125353866 0.9999395019001154 0.000279309669561903 -0.14233538180833483
+  name "robot1"
+  controller "e-puck_avoid_collision"
+}
+E-puck {
+  hidden position_0_0 3.2146835564763805
+  hidden position_0_1 3.214694744969229
+  hidden linearVelocity_0 0.006128753261813693 -5.165758925921679e-06 -0.06262647557530875
+  hidden angularVelocity_0 -0.012353745213964299 0.001804869151529738 -0.0006225629693108489
+  hidden rotation_1 -0.9999999999999999 0 0 3.2146835564763805
+  hidden rotation_2 -1 0 0 3.214694744969229
+  translation 0.2558912798122261 -3.50991807526492e-05 0.18612834142673385
+  rotation -0.025524468819018917 -0.9996740569121713 -0.0005304981321170591 0.09293915906450845
+  name "robot2"
+  controller "e-puck_avoid_collision"
+}
+WoodenBox {
+  translation -0.41912421325119464 0.049803800181921064 -0.3844799190157846
+  rotation 1.162360333617997e-16 -1 -5.329070518202357e-18 0.09162978572970208
+  size 0.1 0.1 0.1
+  mass 1
+}
+Solid {
+  translation 0.25 0.049589059964596074 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 3.112840083541e-07 0
+}
+Solid {
+  translation -0.09999991412340033 0.24834944143845994 0.13999999999999996
+  rotation 0 0 -0.9999999999999999 1.5707963411795867
+  children [
+    DEF G0 Group {
+      children [
+        Transform {
+          translation 0 0.05 0
+          children [
+            DEF DUMBELL_END_SHAPE Shape {
+              appearance DEF DUMBBELL_APPEARANCE Appearance {
+                material Material {
+                }
+              }
+              geometry DEF DUMBBELL_END_GEOMETRY Sphere {
+                radius 0.03
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 0 -0.05 0
+          children [
+            Shape {
+              appearance USE DUMBBELL_APPEARANCE
+              geometry USE DUMBBELL_END_GEOMETRY
+            }
+          ]
+        }
+        Shape {
+          appearance USE DUMBBELL_APPEARANCE
+          geometry Cylinder {
+            height 0.1
+            radius 0.01
+          }
+        }
+      ]
+    }
+  ]
+  name "solid(5)"
+  contactMaterial "dumbbell"
+  boundingObject USE G0
+  physics Physics {
+    density -1
+    mass 2
+  }
+}

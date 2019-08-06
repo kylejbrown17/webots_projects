@@ -1,0 +1,232 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.39527402255591826 -0.733485217090235 -0.5529537805301222 2.1522094017856763
+  position -2.1265886323409227 6.892156407845677 0.7680345909975181
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 5 0 5
+  tileSize 0.25 0.25
+}
+E-puck {
+  hidden position_0_0 347.49791504583555
+  hidden position_0_1 307.31748890935893
+  hidden linearVelocity_0 0.055175731228365735 1.03143042396521e-05 0.031067873294908368
+  hidden angularVelocity_0 0.02056681580074752 0.005087030338932697 -0.03595498884236916
+  hidden translation_1 -0.026000000000000006 0.02 0
+  hidden rotation_1 1 0 0 4.3604621562212875
+  hidden linearVelocity_1 0.05527326662249407 1.6251694799349241e-06 0.031523414245125864
+  hidden angularVelocity_1 1.5759143496537906 -0.012176679364805834 -2.7638900484234488
+  hidden translation_2 0.025999999999999992 0.02 0
+  hidden rotation_2 -1 0 0 5.724594164738778
+  hidden linearVelocity_2 0.055615305950591616 -2.819315402757758e-06 0.030916274710339347
+  hidden angularVelocity_2 1.5461302089114923 0.004438132195414945 -2.7804505551511087
+  translation 0.9959922401414439 -3.698892739204679e-05 2.399347371888955
+  rotation 0.0003645321115920763 0.9999998574675975 0.0003901039918230039 -2.0780647613470986
+  name "robot1"
+  controller "e-puck_avoid_collision"
+}
+E-puck {
+  hidden position_0_0 333.73304821642466
+  hidden position_0_1 321.07501676957827
+  hidden linearVelocity_0 -0.06277025402412621 -3.262938687287911e-05 -0.005158322598040326
+  hidden angularVelocity_0 -0.0014581826247369633 2.2210300771107154 -0.007020742197653843
+  hidden translation_1 -0.026 0.02 0
+  hidden rotation_1 1 0 0 5.558958371273007
+  hidden linearVelocity_1 -0.005228736045146151 4.1622331871771145e-06 -0.0010231838647018605
+  hidden angularVelocity_1 -0.03415033839249889 2.2147323130161505 -0.009851437430497309
+  hidden translation_2 0.025999999999999995 0.02 0
+  hidden rotation_2 0.9999999999999999 0 0 5.650619203760227
+  hidden linearVelocity_2 -0.11983448229617588 -2.2235946131488127e-06 -0.00933931673405617
+  hidden angularVelocity_2 -0.48982769179320196 2.2293545459810606 6.254190385371291
+  translation 0.8097467648856713 -3.406464787053358e-05 0.557231894248706
+  rotation -0.00013043423034591562 -0.9999999784383748 0.0001615863889368665 -1.51995640133967
+  name "robot2"
+  controller "e-puck_avoid_collision"
+}
+IprHd6ms180 {
+  hidden position_0_0 1.5010611883287142e-12
+  hidden rotation_1 4.1037903216996106e-07 0.999999999990282 4.389458547653493e-06 0.12479146786124945
+  hidden position_1_0 3.6208715032442063e-07
+  hidden translation_2 0 0 0
+  hidden rotation_2 0 0 1 0.5977753620871505
+  hidden position_2_0 -9.416631969301149e-07
+  hidden translation_3 0 0.19 0
+  hidden rotation_3 0 0 -1 2.2218009416631967
+  hidden position_3_0 3.453625561894139e-07
+  hidden translation_4 0 0.139 0
+  hidden rotation_4 0 0 1 2.0333103453625565
+  hidden position_4_0 1.9248622341266446e-10
+  hidden translation_5 0 0.1185 0
+  hidden rotation_5 0 1 0 2.993190000192486
+  hidden position_5_0 4.762806125465768e-10
+  hidden position_5_1 3.408767713332237e-09
+  hidden translation_6 0 0.0983 0
+  hidden rotation_6 1 0 0 0
+  hidden translation_11 3.088816182827969e-07 0.03249928002032476 -0.00570004617843986
+  hidden rotation_11 1 6.298041936124252e-15 -9.266084687631083e-15 -0.19200000000000106
+  hidden translation_12 3.0888160507114293e-07 0.08369928002032534 -4.617843860077464e-08
+  hidden rotation_12 0.13286992311484122 0.06797996066340714 -0.9887994278313765 -4.491196064140469e-15
+  hidden translation_14 0 0.0983 0
+  hidden rotation_14 1 0 0 0
+  hidden translation_19 3.088816289964491e-07 0.03249928002032798 0.007699953821557276
+  hidden rotation_19 1 3.34606103046021e-16 1.6033209104288506e-16 -2.949685307179587
+  hidden translation_20 3.0888160934550157e-07 0.083699280020326 -4.617845639209861e-08
+  hidden rotation_20 1 4.996003616174346e-16 5.447031720412307e-16 3.1414999999999997
+  translation 0.18689872751674091 0 0.17729974516687147
+}
+DEF conveyor_belt ConveyorBelt {
+  hidden translation_1 0 0.18749215200768019 0
+  hidden rotation_1 -1 0 0 3.1415926535897927
+  translation 0.9806413745906841 -5.329070518200751e-15 9.569341554172421
+  size 1.5 0.25 0.5
+}
+WoodenBox {
+  translation 0.4385822438409153 0.049803800028815154 1.5701869953833272
+  rotation 3.28860108211964e-13 -0.9999999999999999 -8.69722537612302e-15 0.0061843927485531035
+  size 0.1 0.1 0.1
+  mass 1
+}
+Solid {
+  translation 0.6400000000000003 0.04958907973844099 0.41000000000000025
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry DEF BALL_GEOMETRY Sphere {
+        radius 0.05
+        subdivision 2
+      }
+    }
+  ]
+  boundingObject USE BALL_GEOMETRY
+  physics Physics {
+  }
+  linearVelocity 0 -9.083003295685578e-10 0
+}
+Solid {
+  translation 2.8966897422932902e-06 0.024019000251485446 -1.6893183296673442e-06
+  rotation -1.5017124579527708e-11 0.9999999925316507 0.00012221578701615 -2.1494703814650354e-07
+  children [
+    DEF G0 Group {
+      children [
+        Transform {
+          translation 5 0 -0.005
+          scale 10 1 1
+          children [
+            DEF WALL_SHAPE Shape {
+              appearance PBRAppearance {
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 1 0.05 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 10.005 0 5
+          rotation 0 1 0 1.5707963220000003
+          scale 10 1 1
+          children [
+            DEF WALL_SHAPE Shape {
+              appearance PBRAppearance {
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 1 0.05 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation 5 0 10.005
+          scale 10 1 1
+          children [
+            DEF WALL_SHAPE Shape {
+              appearance PBRAppearance {
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 1 0.05 0.01
+              }
+            }
+          ]
+        }
+        Transform {
+          translation -0.005 0 5
+          rotation 0 0.9999999999999999 0 4.712388966
+          scale 10 1 1
+          children [
+            DEF WALL_SHAPE Shape {
+              appearance PBRAppearance {
+                roughness 1
+                metalness 0
+              }
+              geometry Box {
+                size 1 0.05 0.01
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  name "factory_walls"
+  boundingObject USE G0
+  physics Physics {
+  }
+  linearVelocity 2.95470798511828e-20 -1.9253350284486305e-09 -3.0978247764668635e-20
+  angularVelocity 4.086541189318333e-18 -2.079229009090781e-21 -4.767631384005418e-18
+}
+Pioneer2 {
+  translation 1.517703391018375 0 0.6363018830140817
+  controller ""
+}
+Youbot {
+  hidden position_0_0 9.127970437606831e-10
+  hidden position_0_1 9.121769447040356e-10
+  hidden position_0_2 -9.4120877614901e-10
+  hidden position_0_3 -9.414087188570755e-10
+  hidden position_1_0 9.769500193906245e-07
+  hidden translation_2 0 0 0.077
+  hidden rotation_2 0 0 1 9.771344846937158e-07
+  hidden position_2_0 1.5700026343809341
+  hidden translation_3 0.033 0 0.07
+  hidden rotation_3 0 -0.9999999999999999 0 1.5700026343809341
+  hidden position_3_0 -2.635001475997403
+  hidden translation_4 0 0 0.155
+  hidden rotation_4 0 1 0 2.635001475997403
+  hidden position_4_0 1.7800004229910242
+  hidden translation_5 0 0 0.135
+  hidden position_5_0 -9.220489330380866e-08
+  hidden translation_6 0 0 0.081
+  hidden rotation_6 0 0 -1 9.424321830774485e-08
+  hidden position_6_0 1.231441910971823e-11
+  hidden position_6_1 -1.231309054135086e-11
+  hidden translation_7 0 1.231441910971823e-11 0.09
+  hidden rotation_7 1 0 0 4.71239
+  hidden translation_8 0 1.231309054135086e-11 0.09
+  hidden rotation_8 0 -0.7071067811865476 0.7071067811865476 3.14159
+  hidden translation_9 0.228 -0.158 -0.055
+  hidden rotation_9 0 1 0 0
+  hidden translation_10 0.228 0.158 -0.055
+  hidden rotation_10 0 1 0 0
+  hidden translation_11 -0.228 -0.158 -0.055
+  hidden rotation_11 0 1 0 0
+  hidden translation_12 -0.228 0.158 -0.055
+  hidden rotation_12 0 1 0 0
+  translation 1.54027047135633 0.10193777039538351 1.2999940552239782
+  rotation 0.9999993680078566 -0.0008260248977430033 0.0007626708043651701 -1.5708374065893256
+}
