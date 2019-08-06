@@ -5,7 +5,7 @@
 int main() {
   wb_robot_init();
 
-  // do this once only
+  // Get robot node references
   char robot_names[2][10] = {"ROBOT_1", "ROBOT_2"};
   WbNodeRef robot_nodes[2]; // references to robot nodes
   WbFieldRef trans_fields[2]; // references to "translation" field of each robot
