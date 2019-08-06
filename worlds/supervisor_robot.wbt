@@ -1,0 +1,161 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.5189941896790876 0.827258769620136 0.21514636684342525 5.326567778796105
+  position -0.5977820966067607 0.5441414494623024 0.8606021479099303
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+DEF ROBOT_1 FourWheelsRobot {
+  translation 0.2 0.04 0
+}
+WoodenBox {
+  translation -0.41912421325119464 0.04999999999999978 -0.3844799190157846
+  rotation 0 -1 0 0.0916297857297021
+  size 0.1 0.1 0.1
+  mass 1
+}
+DEF ROBOT_2 Robot {
+  translation 0 0.04 0
+  rotation 1 0 0 0
+  children [
+    DistanceSensor {
+      translation 0.03 0 0.1
+      rotation 0 1 0 -1.3090003061004252
+      children [
+        DEF DISTANCE_SENSOR Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 0 0.39999999999999997 0.8999999999999999
+              emissiveColor 0 0.39999999999999997 1
+            }
+          }
+          geometry Box {
+            size 0.01 0.01 0.01
+          }
+        }
+      ]
+      name "ds_left"
+    }
+    DistanceSensor {
+      translation -0.03 0 0.1
+      rotation 0 1 0 -1.8325996938995748
+      children [
+        USE DISTANCE_SENSOR
+      ]
+      name "ds_right"
+    }
+    DEF BODY Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.7999999999999999 0 0
+          emissiveColor 0.5 0 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.05 0.2
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel1"
+        }
+      ]
+      endPoint DEF WHEEL1 Solid {
+        translation 0.06 0 0.05
+        children [
+          DEF WHEEL Transform {
+            rotation 0 0 1 1.5707996938995747
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                    diffuseColor 0 0.39999999999999997 0
+                    emissiveColor 0 0.5 0
+                  }
+                }
+                geometry Cylinder {
+                  height 0.02
+                  radius 0.04
+                }
+              }
+            ]
+          }
+        ]
+        name "wheel_solid"
+        boundingObject USE WHEEL
+        physics DEF WHEEL_PH Physics {
+        }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor -0.06 0 0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel2"
+        }
+      ]
+      endPoint DEF WHEEL2 Solid {
+        translation -0.06 0 0.05
+        children [
+          USE WHEEL
+        ]
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor 0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel3"
+        }
+      ]
+      endPoint DEF WHEEL3 Solid {
+        translation 0.06 0 -0.05
+        children [
+          USE WHEEL
+        ]
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+        anchor -0.06 0 -0.05
+      }
+      device [
+        RotationalMotor {
+          name "wheel4"
+        }
+      ]
+      endPoint Solid {
+        translation -0.06 0 -0.05
+        children [
+          USE WHEEL
+        ]
+        boundingObject USE WHEEL
+        physics USE WHEEL_PH
+      }
+    }
+  ]
+  boundingObject USE BODY
+  physics Physics {
+  }
+  controller "my_first_supervisor"
+  supervisor TRUE
+}

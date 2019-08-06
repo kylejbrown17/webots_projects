@@ -7,5 +7,5 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 1 "controllers/4_wheels_collision_avoidance/4_wheels_collision_avoidance.c" "protos/FourWheelsRobot.proto" "worlds/four_wheels_robot.wbt"
+textFiles: 1 "protos/FourWheelsRobot.proto" "worlds/four_wheels_robot.wbt"
 globalOptionalRendering: DistanceSensorRays
