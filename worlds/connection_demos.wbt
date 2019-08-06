@@ -3,8 +3,8 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.9997075865026016 0.022379989201060248 -0.009158469987060183 5.839932471404424
-  position 0.08413532078698756 0.47207400138239125 1.0515868185012414
+  orientation 0.9131053565419396 0.39897882844684585 0.08399108467926741 5.766264265037962
+  position -0.423198254431524 0.76958601718776 1.253203127273524
 }
 TexturedBackground {
 }
@@ -55,4 +55,10 @@ Solid {
   boundingObject USE BOX
   physics Physics {
   }
+}
+FourWheelsRobot {
+  translation -0.3 0.04 0
+  rotation 0 1 0 1.5707959999999999
+  bodyMass 4
+  controller "4_wheels_block_pusher"
 }

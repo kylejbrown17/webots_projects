@@ -7,4 +7,4 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 1 "controllers/4_wheels_collision_avoidance/4_wheels_collision_avoidance.c" "protos/FourWheelsRobot.proto" "worlds/four_wheels_robot.wbt"
+textFiles: 3 "controllers/4_wheels_collision_avoidance/4_wheels_collision_avoidance.c" "worlds/four_wheels_robot.wbt" "controllers/4_wheels_block_pusher/4_wheels_block_pusher.c" "protos/FourWheelsRobot.proto"
