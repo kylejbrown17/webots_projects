@@ -1,0 +1,58 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation 0.9997075865026016 0.022379989201060248 -0.009158469987060183 5.839932471404424
+  position 0.08413532078698756 0.47207400138239125 1.0515868185012414
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+}
+Solid {
+  translation 0 0.05 0
+  children [
+    Connector {
+      translation 0.05 0 0
+      name "connector1"
+      model "connection1"
+      isLocked TRUE
+      autoLock TRUE
+    }
+    DEF BOX Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.7999999999999999 0 0
+          emissiveColor 0.39999999999999997 0 0
+        }
+      }
+      geometry Box {
+        size 0.1 0.1 0.1
+      }
+    }
+  ]
+  boundingObject USE BOX
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.2 0.05 0
+  children [
+    Connector {
+      translation -0.05 0 0
+      rotation 0 1 0 3.141592653589793
+      name "connector2"
+      model "connection1"
+      isLocked TRUE
+      autoLock TRUE
+    }
+    USE BOX
+  ]
+  name "solid(1)"
+  boundingObject USE BOX
+  physics Physics {
+  }
+}
