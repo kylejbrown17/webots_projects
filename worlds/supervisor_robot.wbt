@@ -3,17 +3,15 @@ WorldInfo {
   basicTimeStep 16
 }
 Viewpoint {
-  orientation 0.5189941896790876 0.827258769620136 0.21514636684342525 5.326567778796105
-  position -0.5977820966067607 0.5441414494623024 0.8606021479099303
+  orientation 0.5406018576836088 0.8245648859401729 0.16686036181040956 5.5319448886115214
+  position -2.281054857773972 1.9711749469460575 3.3726083689736583
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-}
-DEF ROBOT_1 FourWheelsRobot {
-  translation 0.2 0.04 0
+  floorSize 2 2
 }
 WoodenBox {
   translation -0.41912421325119464 0.04999999999999978 -0.3844799190157846
@@ -25,6 +23,12 @@ DEF ROBOT_2 Robot {
   translation 0 0.04 0
   rotation 1 0 0 0
   children [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
     DistanceSensor {
       translation 0.03 0 0.1
       rotation 0 1 0 -1.3090003061004252
@@ -158,4 +162,7 @@ DEF ROBOT_2 Robot {
   }
   controller "my_first_supervisor"
   supervisor TRUE
+}
+DEF ROBOT_1 FourWheelsRobot {
+  translation 0.2 0.04 0
 }

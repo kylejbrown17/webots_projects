@@ -7,4 +7,4 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 1 "protos/FourWheelsRobot.proto" "controllers/my_first_supervisor/my_first_supervisor.c" "worlds/supervisor_robot.wbt"
+textFiles: 2 "protos/FourWheelsRobot.proto" "worlds/supervisor_robot.wbt" "controllers/4_wheels_collision_avoidance/4_wheels_collision_avoidance.c"

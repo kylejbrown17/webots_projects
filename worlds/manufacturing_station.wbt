@@ -1,0 +1,131 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+}
+Viewpoint {
+  orientation -0.13954505150136476 -0.9824716152357189 -0.12359896382089454 1.5153326257248156
+  position -1.5422575421504192 0.5363280546381688 0.04686489724378079
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 2 2
+}
+DEF SUPERVISOR_ROBOT Robot {
+  name "supervisor"
+  controller "manufacturing_station_supervisor"
+  supervisor TRUE
+}
+Solid {
+  translation 0.125 0.05 0.125
+  children [
+    DEF BOX1 Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.7999999999999999 0.5 0.3
+          emissiveColor 0.3 0.19999999999999998 0
+        }
+      }
+      geometry Box {
+        size 0.25 0.1 0.25
+      }
+    }
+  ]
+  name "BLOCK1"
+  boundingObject USE BOX1
+}
+Solid {
+  translation 0.58 0.045 -0.23
+  children [
+    USE BOX1
+  ]
+  name "solid(2)"
+  boundingObject USE BOX1
+}
+Solid {
+  translation -0.32 0.045 0.01
+  children [
+    USE BOX1
+  ]
+  name "solid(3)"
+  boundingObject USE BOX1
+}
+UR3e {
+  translation 0.125 0.1 0.125
+  controller "ure_lego_unloader"
+  toolSlot [
+    DistanceSensor {
+      translation 0 0.06 0
+      rotation 0 0 1 1.5707996938995747
+      aperture 0.5
+    }
+    Robotiq3fGripper {
+    }
+  ]
+}
+DEF CYLINDER Solid {
+  translation 0.58 0.126 -0.61
+  children [
+    DEF CYLINDER Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.7999999999999999 0 0
+        }
+      }
+      geometry Cylinder {
+        height 0.25
+        radius 0.03
+      }
+    }
+  ]
+  boundingObject USE CYLINDER
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.32999999999999996 0.16 0.02
+  children [
+    DEF BLOCK1_CONNECTOR Connector {
+      translation 0 0.06 0
+      rotation 1 0 0 -1.5707996938995747
+      name "block1_connector"
+      model "connector1"
+      isLocked TRUE
+      autoLock TRUE
+      unilateralLock FALSE
+    }
+    DEF BOX2 Shape {
+      appearance Appearance {
+        material Material {
+        }
+      }
+      geometry Box {
+        size 0.1 0.12 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject USE BOX2
+  physics Physics {
+  }
+}
+Solid {
+  translation 0.58 0.16 -0.24
+  children [
+    Connector {
+      translation 0 -0.06 0
+      rotation 1 0 0 1.5707996938995747
+      model "connector1"
+      isLocked TRUE
+      autoLock TRUE
+      unilateralLock FALSE
+    }
+    USE BOX2
+  ]
+  name "solid(4)"
+  boundingObject USE BOX2
+  physics Physics {
+  }
+}

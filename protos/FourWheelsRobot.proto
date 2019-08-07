@@ -9,6 +9,12 @@ Robot {
   translation IS translation
   rotation IS rotation
   children [
+    GPS {
+      name "GPS"
+    }
+    InertialUnit {
+      name "IMU"
+    }
     DistanceSensor {
       translation 0.03 0 0.1
       rotation 0 1 0 -1.3090003061004252
