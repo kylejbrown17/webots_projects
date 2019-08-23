@@ -3,7 +3,14 @@
 #include <stdio.h>
 #include <webots/connector.h>
 
+#include <julia.h>
+
 int main() {
+
+  jl_init();
+  (void)jl_eval_string("println(sqrt(2.0))");
+  
+  
   wb_robot_init();
 
   // Get robot node references
@@ -22,10 +29,12 @@ int main() {
       printf("autoLock: %i\n",wb_supervisor_field_get_sf_bool(autoLock));
       count = 20;
     }
+    
     count--;
   }
 
   wb_robot_cleanup();
+  jl_atexit_hook(0);
 
   return 0;
 }

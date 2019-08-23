@@ -66,6 +66,14 @@
 ### VERBOSE = 1
 ###
 ###-----------------------------------------------------------------------------
+JL_SHARE = $(shell julia -e 'print(joinpath(Sys.BINDIR, Base.DATAROOTDIR, "julia"))')
+CFLAGS   += $(shell $(JL_SHARE)/julia-config.jl --cflags)
+# CXXFLAGS += $(shell $(JL_SHARE)/julia-config.jl --cflags)
+# LDFLAGS  += $(shell $(JL_SHARE)/julia-config.jl --ldflags)
+LFLAGS  += $(shell $(JL_SHARE)/julia-config.jl --ldflags)
+
+# LDLIBS   += $(shell $(JL_SHARE)/julia-config.jl --ldlibs)
+LIBRARIES += $(shell $(JL_SHARE)/julia-config.jl --ldlibs)
 
 ### Do not modify: this includes Webots global Makefile.include
 space :=

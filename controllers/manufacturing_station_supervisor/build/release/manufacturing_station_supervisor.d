@@ -4,4 +4,32 @@ build/release/manufacturing_station_supervisor.o: \
  /usr/local/webots/include/controller/c/webots/types.h \
  /usr/local/webots/include/controller/c/webots/nodes.h \
  /usr/local/webots/include/controller/c/webots/supervisor.h \
- /usr/local/webots/include/controller/c/webots/connector.h
+ /usr/local/webots/include/controller/c/webots/connector.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/julia.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/libsupport.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/platform.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/dtypes.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/utils.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/utf8.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/ios.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv/errno.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv/version.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv/unix.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv/threadpool.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/uv/linux.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/timefuncs.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/hashing.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/ptrhash.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/htable.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/bitvector.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/dirpath.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/strtod.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/arraylist.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/analyzer_annotations.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/atomics.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/tls.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/julia_threads.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/julia_assert.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/locks.h \
+ /home/kylebrown/.local/opt/julia-1.0.2/include/julia/julia_version.h
