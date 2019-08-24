@@ -7,5 +7,6 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 3 "controllers/my_first_supervisor/my_first_supervisor.c" "controllers/ure_lego_unloader/ure_lego_unloader.c" "controllers/manufacturing_station_supervisor/manufacturing_station_supervisor.c" "controllers/manufacturing_station_supervisor/Makefile"
+textFiles: 2 "controllers/my_first_supervisor/my_first_supervisor.c" "controllers/ure_lego_unloader/ure_lego_unloader.c" "controllers/manufacturing_station_supervisor/manufacturing_station_supervisor.c" "controllers/manufacturing_station_supervisor/Makefile"
 globalOptionalRendering: DistanceSensorRays::ConnectorAxes
+renderingDevicePerspectives: ROBOT1:camera;0;0.848404;0;0

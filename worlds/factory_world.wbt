@@ -1,0 +1,40 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.5512336664057028 -0.5870121043760922 -0.5929234641476739 2.0364970365916912
+  position 3.2927377384855863 11.394217100789215 4.377397664197737
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 4.75 0 4.75
+  floorSize 10 10
+  floorTileSize 1 1
+}
+DEF SUPERVISOR_ROBOT Robot {
+  name "supervisor"
+  controller "manufacturing_station_supervisor"
+  supervisor TRUE
+}
+DEF ROBOT1 Khepera4 {
+  translation 1.5 0 2.5
+  rotation 0 1 0 3.141592653589793
+  name "ROBOT1"
+  controller "grid_world_controller"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
