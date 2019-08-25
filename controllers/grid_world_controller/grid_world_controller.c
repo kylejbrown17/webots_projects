@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
   jl_module_t *GridWorldPathFollowing = (jl_module_t *)jl_eval_string("GridWorldPathFollowing");
   jl_function_t *construct_trajectory = jl_get_function(GridWorldPathFollowing, "construct_trajectory");
   // jl_value_t *grid_path = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),0.0,[EAST,EAST,WAIT,NORTH,EAST,WAIT,WAIT,EAST,EAST,SOUTH],0.5,4.0)");
-  jl_value_t *grid_path = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),0.0,[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST],0.5,2.0)");
+  jl_value_t *grid_path = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),4.0,[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST],0.5,2.0)");
   if (jl_exception_occurred())
     printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
   jl_value_t *base_traj = jl_call1(construct_trajectory, grid_path);
