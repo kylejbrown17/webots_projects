@@ -53,6 +53,37 @@ static const char *infrared_sensors_names[NUMBER_OF_INFRARED_SENSORS] = {
   "ground right infrared sensor"};
 
 int main(int argc, char **argv) {
+  char* robot_name;
+  char* x0;
+  char* y0;
+  char* t0;
+  char* cell_width;
+  char* transition_time;
+  char* instructions;
+  if (argc == 7){
+    robot_name      = argv[0];
+    x0              = argv[1];
+    y0              = argv[2];
+    t0              = argv[3];
+    cell_width      = argv[4];
+    transition_time = argv[5];
+    instructions    = argv[6];
+  } else {
+    robot_name      = "Default Robot";
+    x0              = "2.5";
+    y0              = "1.5";
+    t0              = "4.0";
+    cell_width      = "0.5";
+    transition_time = "2.0";
+    instructions    = "[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST]";
+  };
+
+  printf("Hello from %s\n", robot_name); 
+  char argbuffer[200];
+  (void)sprintf(argbuffer,
+    "grid_path = construct_grid_world_path(%s,%s,%s,%s,%s,%s)",
+    x0, y0, t0, cell_width, transition_time, instructions);
+  printf("%s\n",argbuffer);
   /*
   Julia stuff
   */
@@ -60,29 +91,36 @@ int main(int argc, char **argv) {
   jl_eval_string("using Vec");
   jl_eval_string("using GridWorldPathFollowing");
   jl_eval_string("GridWorldPathFollowing.warmup()");
-  // initialize the controller and robot model
-  jl_value_t *switching_controller = jl_eval_string("switching_controller = SwitchingController()");
-  jl_value_t *model = jl_eval_string("model = UnicycleModel()");
-  if (jl_exception_occurred())
-    printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
-  // Get the optimized trajectory
+  // get required modules and functions
   jl_module_t *GridWorldPathFollowing = (jl_module_t *)jl_eval_string("GridWorldPathFollowing");
   jl_function_t *construct_trajectory = jl_get_function(GridWorldPathFollowing, "construct_trajectory");
-  // jl_value_t *grid_path = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),0.0,[EAST,EAST,WAIT,NORTH,EAST,WAIT,WAIT,EAST,EAST,SOUTH],0.5,4.0)");
-  jl_value_t *grid_path = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),4.0,[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST],0.5,2.0)");
-  if (jl_exception_occurred())
-    printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
-  jl_value_t *base_traj = jl_call1(construct_trajectory, grid_path);
-  jl_function_t *optimize_velocity_profile_traj_only = jl_get_function(GridWorldPathFollowing, "optimize_velocity_profile_traj_only");
-  jl_value_t *traj = jl_call1(optimize_velocity_profile_traj_only, base_traj);
-  // wrap the controller and trajectory into a UnicycleController
   jl_function_t *UnicycleController = jl_get_function(GridWorldPathFollowing,"UnicycleController");
-  jl_value_t *controller = jl_call3(UnicycleController,model,traj,switching_controller);
-  // state vector type
-  jl_value_t *state_type = jl_apply_array_type((jl_value_t*)jl_float64_type, 1);
-  // function to get the commanded action from the controller
+  jl_function_t *optimize_velocity_profile_traj_only = jl_get_function(GridWorldPathFollowing, "optimize_velocity_profile_traj_only");
   jl_function_t *get_action = jl_get_function(GridWorldPathFollowing, "get_action");
   jl_function_t *get_state = jl_get_function(GridWorldPathFollowing, "get_state");
+  // initialize the switching_controller and robot model
+  jl_value_t *switching_controller  = jl_eval_string("switching_controller = SwitchingController()");
+  jl_value_t *model                 = jl_eval_string("model = UnicycleModel()");
+
+  if (jl_exception_occurred())
+    printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
+
+  // Get the optimized trajectory
+ 
+  // int n=sprintf(argbuffer,
+  //   "grid_path = construct_grid_world_path(%f,%f,%f,%f,%f,%s)",
+  //   2.5, 1.5, 4.0, 0.5, 2.0, "[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST]");
+  jl_value_t *grid_path   = jl_eval_string(argbuffer);
+  // jl_value_t *grid_path   = jl_eval_string("grid_path = construct_grid_world_path(VecE2(2.5,1.5),4.0,[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST],0.5,2.0)");
+  if (jl_exception_occurred())
+    printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
+  jl_value_t *base_traj   = jl_call1(construct_trajectory, grid_path);
+  jl_value_t *traj        = jl_call1(optimize_velocity_profile_traj_only, base_traj);
+  // wrap the controller and trajectory into a UnicycleController
+  jl_value_t *controller  = jl_call3(UnicycleController,model,traj,switching_controller);
+  // state vector type
+  jl_value_t *state_type  = jl_apply_array_type((jl_value_t*)jl_float64_type, 1);
+
   if (jl_exception_occurred())
       printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
 
@@ -94,10 +132,10 @@ int main(int argc, char **argv) {
   int time_step = (int)wb_robot_get_basic_time_step();
   int i;
   // GPS Sensor
-  WbDeviceTag gps = wb_robot_get_device("GPS");
+  WbDeviceTag gps = wb_robot_get_device("gps");
   wb_gps_enable(gps, time_step);
   // IMU sensor
-  WbDeviceTag imu = wb_robot_get_device("IMU");
+  WbDeviceTag imu = wb_robot_get_device("imu");
   wb_inertial_unit_enable(imu, time_step);
 
   // get and enable the camera
@@ -146,7 +184,7 @@ int main(int argc, char **argv) {
       };
 
     // get controller command
-    jl_array_t *state_vec = jl_ptr_to_array_1d(state_type, state, 10, 0);
+    jl_array_t *state_vec = jl_ptr_to_array_1d(state_type, state, 3, 0);
     jl_value_t *t = jl_box_float64(wb_robot_get_time());
     if (jl_exception_occurred())
       printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));

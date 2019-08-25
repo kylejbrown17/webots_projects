@@ -7,8 +7,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.0692296466808623 -0.989490066823378 -0.12695142251392727 3.675543643281756
-  position 3.486104566182571 0.9945521440617828 0.5626533356985373
+  orientation 0.034698369655370126 -0.99152853672305 -0.1251686222945133 3.6398896607989606
+  position 3.326317361586122 0.9811597601679953 0.329589179343026
 }
 TexturedBackground {
 }
@@ -29,12 +29,25 @@ DEF ROBOT1 Khepera4 {
   rotation 0 1 0 3.141592653589793
   name "ROBOT1"
   controller "grid_world_controller"
+  controllerArgs "2.5 1.5 0.0 0.5 2.0 [EAST,SOUTH]"
   turretSlot [
     InertialUnit {
       name "IMU"
     }
     GPS {
       name "GPS"
+    }
+  ]
+}
+DEF ROBOT2 Khepera4 {
+  translation 2 0 3
+  name "ROBOT2"
+  controller "grid_world_controller"
+  controllerArgs "3.0 2.0 0.0 0.5 2.0 [WEST,NORTH,EAST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+    }
+    GPS {
     }
   ]
 }
