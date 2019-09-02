@@ -7,6 +7,7 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 0 "controllers/grid_world_controller/grid_world_controller.c" "../../../../usr/local/webots/projects/robots/k-team/khepera4/protos/Khepera4.proto"
-renderingDevicePerspectives: ROBOT2:camera;0;0.848404;0;0
+textFiles: 2 "controllers/grid_world_controller/grid_world_controller.c" "../../../../usr/local/webots/projects/robots/k-team/khepera4/protos/Khepera4.proto" "controllers/factory_supervisor/factory_supervisor.c" "worlds/factory_world.wbt" "worlds/file.wbt"
 renderingDevicePerspectives: ROBOT1:camera;0;0.848404;0;0
+renderingDevicePerspectives: ROBOT3:camera;0;0.848404;0;0
+renderingDevicePerspectives: ROBOT2:camera;0;0.848404;0;0

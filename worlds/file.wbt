@@ -1,0 +1,171 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.034698369655370126 -0.99152853672305 -0.1251686222945133 3.6398896607989606
+  position 3.326317361586122 0.9811597601679953 0.329589179343026
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 4.750000 0 4.750000
+  floorSize 10.000000 10.000000
+  floorTileSize 1 1
+}
+DEF ROBOT_1 Khepera4 {
+  translation 6.500000 0 6.500000
+  rotation 0 1 0 0.000000
+  name "ROBOT_1"
+  controller "grid_world_controller"
+  controllerArgs "6.500000 6.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_2 Khepera4 {
+  translation 10.000000 0 2.500000
+  rotation 0 1 0 0.000000
+  name "ROBOT_2"
+  controller "grid_world_controller"
+  controllerArgs "2.500000 10.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_3 Khepera4 {
+  translation 5.500000 0 3.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_3"
+  controller "grid_world_controller"
+  controllerArgs "3.000000 5.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_4 Khepera4 {
+  translation 2.000000 0 5.500000
+  rotation 0 1 0 0.000000
+  name "ROBOT_4"
+  controller "grid_world_controller"
+  controllerArgs "5.500000 2.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_5 Khepera4 {
+  translation 2.000000 0 2.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_5"
+  controller "grid_world_controller"
+  controllerArgs "2.000000 2.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_6 Khepera4 {
+  translation 0.500000 0 4.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_6"
+  controller "grid_world_controller"
+  controllerArgs "4.000000 0.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_7 Khepera4 {
+  translation 5.500000 0 1.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_7"
+  controller "grid_world_controller"
+  controllerArgs "1.000000 5.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_8 Khepera4 {
+  translation 4.000000 0 1.500000
+  rotation 0 1 0 0.000000
+  name "ROBOT_8"
+  controller "grid_world_controller"
+  controllerArgs "1.500000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_9 Khepera4 {
+  translation 4.000000 0 4.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_9"
+  controller "grid_world_controller"
+  controllerArgs "4.000000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT_10 Khepera4 {
+  translation 4.000000 0 9.000000
+  rotation 0 1 0 0.000000
+  name "ROBOT_10"
+  controller "grid_world_controller"
+  controllerArgs "9.000000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
+    }
+  ]
+}

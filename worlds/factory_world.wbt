@@ -7,8 +7,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.034698369655370126 -0.99152853672305 -0.1251686222945133 3.6398896607989606
-  position 3.326317361586122 0.9811597601679953 0.329589179343026
+  orientation 0.047517447904918964 -0.9863987733449507 -0.1573516828260174 3.3864232529346037
+  position 3.5666333422191707 2.332425294485819 -2.5890984949880522
 }
 TexturedBackground {
 }
@@ -17,11 +17,15 @@ TexturedBackgroundLight {
 RectangleArena {
   translation 4.75 0 4.75
   floorSize 10 10
-  floorTileSize 1 1
+  floorAppearance ChequeredParquetry {
+    textureTransform TextureTransform {
+      scale 0.5 0.5
+    }
+  }
 }
 DEF SUPERVISOR_ROBOT Robot {
   name "supervisor"
-  controller "manufacturing_station_supervisor"
+  controller "factory_supervisor"
   supervisor TRUE
 }
 DEF ROBOT1 Khepera4 {
@@ -29,7 +33,7 @@ DEF ROBOT1 Khepera4 {
   rotation 0 1 0 3.141592653589793
   name "ROBOT1"
   controller "grid_world_controller"
-  controllerArgs "2.5 1.5 0.0 0.5 2.0 [EAST,SOUTH]"
+  controllerArgs "2.5 1.5 2.0 0.5 2.0 [EAST,SOUTH]"
   turretSlot [
     InertialUnit {
       name "IMU"
@@ -46,8 +50,24 @@ DEF ROBOT2 Khepera4 {
   controllerArgs "3.0 2.0 0.0 0.5 2.0 [WEST,NORTH,EAST,SOUTH]"
   turretSlot [
     InertialUnit {
+      name "IMU"
     }
     GPS {
+      name "GPS"
+    }
+  ]
+}
+DEF ROBOT3 Khepera4 {
+  translation 2.5 0 2.5
+  name "ROBOT3"
+  controller "grid_world_controller"
+  controllerArgs "2.5 2.5 0.0 0.5 2.0 [WEST,WEST,WEST,WEST,WEST,SOUTH,EAST,EAST,EAST,SOUTH]"
+  turretSlot [
+    InertialUnit {
+      name "IMU"
+    }
+    GPS {
+      name "GPS"
     }
   ]
 }
