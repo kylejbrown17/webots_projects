@@ -34,9 +34,10 @@
 
 // arena dimensions and resolution
 #define CELL_WIDTH 0.5
-#define X_OFFSET 0.0
-#define Y_OFFSET 0.0
-#define THETA_OFFSET 3.141592653589
+#define X_OFFSET 1.0
+#define Y_OFFSET 1.0
+#define THETA_OFFSET 0.0
+// #define THETA_OFFSET 3.141592653589
 
 // #define NUMBER_OF_ULTRASONIC_SENSORS 5
 // static const char *ultrasonic_sensors_names[NUMBER_OF_ULTRASONIC_SENSORS] = {
@@ -167,7 +168,7 @@ int main(int argc, char **argv) {
   wb_motor_set_velocity(right_motor, 0.0);
 
   // store the last time a message was displayed
-  double display_counter = 0.0;
+  double display_counter = -1.0;
   double display_rate = 1.0; // print sensor and other information every `display_rate` seconds
 
   // main loop
@@ -178,8 +179,8 @@ int main(int argc, char **argv) {
     const double* imu_values = wb_inertial_unit_get_roll_pitch_yaw(imu);
     // extract state from (noiseless) sensor measurements
     double state[] = {
-      gps_values[2],
-      gps_values[0],
+      gps_values[2] + X_OFFSET,
+      gps_values[0] + Y_OFFSET,
       imu_values[2] + THETA_OFFSET
       };
 
@@ -208,8 +209,8 @@ int main(int argc, char **argv) {
         printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
         printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
       }
-    wb_motor_set_velocity(left_motor, wheel_speed_cmd_data[0]);
-    wb_motor_set_velocity(right_motor, wheel_speed_cmd_data[1]);
+    wb_motor_set_velocity(left_motor, 0.1*wheel_speed_cmd_data[0]);
+    wb_motor_set_velocity(right_motor, 0.1*wheel_speed_cmd_data[1]);
   };
 
   // webots cleanup

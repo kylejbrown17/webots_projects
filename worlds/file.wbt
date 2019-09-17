@@ -7,159 +7,27 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.034698369655370126 -0.99152853672305 -0.1251686222945133 3.6398896607989606
-  position 3.326317361586122 0.9811597601679953 0.329589179343026
+  orientation -0.23432830709410452 -0.9556697747430919 -0.17828495768543953 1.3173319349974433
+  position -12.942315423427608 7.287879535004292 11.01400023171173
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation 4.750000 0 4.750000
-  floorSize 10.000000 10.000000
-  floorTileSize 1 1
+  translation 6.25 0 6.25
+  floorSize 13 13
+  floorAppearance ChequeredParquetry {
+    textureTransform TextureTransform {
+      scale 0.5 0.5
+    }
+  }
 }
 DEF ROBOT_1 Khepera4 {
-  translation 6.500000 0 6.500000
-  rotation 0 1 0 0.000000
+  translation 0.5 0 1
   name "ROBOT_1"
   controller "grid_world_controller"
-  controllerArgs "6.500000 6.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_2 Khepera4 {
-  translation 10.000000 0 2.500000
-  rotation 0 1 0 0.000000
-  name "ROBOT_2"
-  controller "grid_world_controller"
-  controllerArgs "2.500000 10.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_3 Khepera4 {
-  translation 5.500000 0 3.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_3"
-  controller "grid_world_controller"
-  controllerArgs "3.000000 5.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_4 Khepera4 {
-  translation 2.000000 0 5.500000
-  rotation 0 1 0 0.000000
-  name "ROBOT_4"
-  controller "grid_world_controller"
-  controllerArgs "5.500000 2.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_5 Khepera4 {
-  translation 2.000000 0 2.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_5"
-  controller "grid_world_controller"
-  controllerArgs "2.000000 2.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_6 Khepera4 {
-  translation 0.500000 0 4.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_6"
-  controller "grid_world_controller"
-  controllerArgs "4.000000 0.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_7 Khepera4 {
-  translation 5.500000 0 1.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_7"
-  controller "grid_world_controller"
-  controllerArgs "1.000000 5.500000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_8 Khepera4 {
-  translation 4.000000 0 1.500000
-  rotation 0 1 0 0.000000
-  name "ROBOT_8"
-  controller "grid_world_controller"
-  controllerArgs "1.500000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_9 Khepera4 {
-  translation 4.000000 0 4.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_9"
-  controller "grid_world_controller"
-  controllerArgs "4.000000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
-  turretSlot [
-    InertialUnit {
-      name "IMU"
-    }
-    GPS {
-      name "GPS"
-    }
-  ]
-}
-DEF ROBOT_10 Khepera4 {
-  translation 4.000000 0 9.000000
-  rotation 0 1 0 0.000000
-  name "ROBOT_10"
-  controller "grid_world_controller"
-  controllerArgs "9.000000 4.000000 0.000000 0.500000 2.000000 [EAST,NORTH,WEST,SOUTH]"
+  controllerArgs "0.5 1.0 0.00 0.50 2.00 GridTransition[EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, NORTH, NORTH, NORTH, NORTH, NORTH, EAST, EAST, NORTH, NORTH, NORTH, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WEST, NORTH, NORTH, NORTH, NORTH, NORTH, NORTH, NORTH, NORTH, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WEST, WEST, WEST, WEST, WEST, WEST, NORTH, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, EAST, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WEST, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT, WAIT]"
   turretSlot [
     InertialUnit {
       name "IMU"

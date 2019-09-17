@@ -1,13 +1,13 @@
 Webots Project File version R2019b
 perspectives: 000000ff00000000fd00000003000000000000020c0000040afc0100000002fb0000001e00480074006d006c0052006f0062006f007400570069006e0064006f007700000000000000020c0000000000000000fb0000001a0044006f00630075006d0065006e0074006100740069006f006e0000000000ffffffff0000006900ffffff000000010000035d00000338fc0200000001fb0000001400540065007800740045006400690074006f00720100000000000003380000008900ffffff000000030000073f000000d0fc0100000001fb0000000e0043006f006e0073006f006c006501000000000000073f0000006900ffffff000003e00000033800000001000000020000000100000008fc00000000
-simulationViewPerspectives: 000000ff0000000100000002000001600000027e0100000002010000000101
+simulationViewPerspectives: 000000ff000000010000000200000100000002de0100000002010000000101
 sceneTreePerspectives: 000000ff0000000100000002000000c0000001120100000002010000000201
 maximizedDockId: -1
 centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 2 "controllers/grid_world_controller/grid_world_controller.c" "../../../../usr/local/webots/projects/robots/k-team/khepera4/protos/Khepera4.proto" "controllers/factory_supervisor/factory_supervisor.c" "worlds/factory_world.wbt" "worlds/file.wbt"
+textFiles: 3 "controllers/grid_world_controller/grid_world_controller.c" "../../../../usr/local/webots/projects/robots/k-team/khepera4/protos/Khepera4.proto" "controllers/factory_supervisor/factory_supervisor.c" "worlds/factory_world.wbt" "worlds/file.wbt"
 renderingDevicePerspectives: ROBOT1:camera;0;0.848404;0;0
 renderingDevicePerspectives: ROBOT3:camera;0;0.848404;0;0
 renderingDevicePerspectives: ROBOT2:camera;0;0.848404;0;0
