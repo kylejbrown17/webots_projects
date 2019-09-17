@@ -34,10 +34,9 @@
 
 // arena dimensions and resolution
 #define CELL_WIDTH 0.5
-#define X_OFFSET 1.0
-#define Y_OFFSET 1.0
-#define THETA_OFFSET 0.0
-// #define THETA_OFFSET 3.141592653589
+#define X_OFFSET 0.0
+#define Y_OFFSET 0.0
+#define THETA_OFFSET 3.141592653589
 
 // #define NUMBER_OF_ULTRASONIC_SENSORS 5
 // static const char *ultrasonic_sensors_names[NUMBER_OF_ULTRASONIC_SENSORS] = {
@@ -54,6 +53,7 @@
 //   "ground right infrared sensor"};
 
 int main(int argc, char **argv) {
+  printf("num args %i\n", argc);
   char* robot_name;
   char* x0;
   char* y0;
@@ -61,14 +61,14 @@ int main(int argc, char **argv) {
   char* cell_width;
   char* transition_time;
   char* instructions;
-  if (argc == 7){
-    robot_name      = argv[0];
-    x0              = argv[1];
-    y0              = argv[2];
-    t0              = argv[3];
-    cell_width      = argv[4];
-    transition_time = argv[5];
-    instructions    = argv[6];
+  if (argc == 8){
+    robot_name      = argv[1];
+    x0              = argv[2];
+    y0              = argv[3];
+    t0              = argv[4];
+    cell_width      = argv[5];
+    transition_time = argv[6];
+    instructions    = argv[7];
   } else {
     robot_name      = "Default Robot";
     x0              = "2.5";
@@ -78,9 +78,9 @@ int main(int argc, char **argv) {
     transition_time = "2.0";
     instructions    = "[EAST,NORTH,EAST,SOUTH,EAST,NORTH,NORTH,WEST]";
   };
-
+  
   printf("Hello from %s\n", robot_name);
-  char argbuffer[200];
+  char argbuffer[10000];
   (void)sprintf(argbuffer,
     "grid_path = construct_grid_world_path(%s,%s,%s,%s,%s,%s)",
     x0, y0, t0, cell_width, transition_time, instructions);
@@ -209,8 +209,8 @@ int main(int argc, char **argv) {
         printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
         printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
       }
-    wb_motor_set_velocity(left_motor, 0.1*wheel_speed_cmd_data[0]);
-    wb_motor_set_velocity(right_motor, 0.1*wheel_speed_cmd_data[1]);
+    wb_motor_set_velocity(left_motor, wheel_speed_cmd_data[0]);
+    wb_motor_set_velocity(right_motor, wheel_speed_cmd_data[1]);
   };
 
   // webots cleanup
