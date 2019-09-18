@@ -179,6 +179,8 @@ int main(int argc, char **argv) {
   double display_counter = -1.0;
   double display_rate = 1.0; // print sensor and other information every `display_rate` seconds
 
+  // Disable Garbage Collector
+  jl_gc_enable(0); 
   // main loop
   while (wb_robot_step(time_step) != -1) {
 

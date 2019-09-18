@@ -8,13 +8,13 @@ selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
 textFiles: 0 "controllers/grid_world_controller/grid_world_controller.c" "worlds/world134.wbt"
-renderingDevicePerspectives: ROBOT_2:camera;0;0.933511;0;0
-renderingDevicePerspectives: ROBOT_7:camera;0;0.933511;0;0
-renderingDevicePerspectives: ROBOT_6:camera;0;0.933511;0;0
-renderingDevicePerspectives: ROBOT_3:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_8:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_3:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_6:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_2:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_10:camera;0;0.933511;0;0
-renderingDevicePerspectives: ROBOT_4:camera;0;0.933511;0;0
-renderingDevicePerspectives: ROBOT_1:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_9:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_1:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_4:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_5:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_7:camera;0;0.933511;0;0
