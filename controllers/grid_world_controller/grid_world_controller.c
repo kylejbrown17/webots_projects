@@ -89,6 +89,9 @@ int main(int argc, char **argv) {
   Julia stuff
   */
   jl_init();
+  jl_value_t* refs = jl_eval_string("refs = IdDict()");
+  jl_function_t* setindex = jl_get_function(jl_main_module, "setindex!");
+  
   jl_eval_string("using Pkg");
   jl_eval_string("Pkg.activate(joinpath(Pkg.devdir(),\"WebotsSim\"))");
   jl_eval_string("using Vec");
@@ -119,10 +122,13 @@ int main(int argc, char **argv) {
     printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
   jl_value_t *base_traj   = jl_call1(construct_trajectory, grid_path);
   jl_value_t *traj        = jl_call1(optimize_velocity_profile_traj_only, base_traj);
+  jl_call3(setindex, refs, traj, traj);
   // wrap the controller and trajectory into a UnicycleController
   jl_value_t *controller  = jl_call3(UnicycleController,model,traj,switching_controller);
+  jl_call3(setindex, refs, controller, controller);
   // state vector type
   jl_value_t *state_type  = jl_apply_array_type((jl_value_t*)jl_float64_type, 1);
+  jl_call3(setindex, refs, state_type, state_type);
 
   if (jl_exception_occurred())
       printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
@@ -193,10 +199,22 @@ int main(int argc, char **argv) {
       printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
 
     jl_value_t *target = jl_call3(get_state,model,traj,t);
+    if (jl_exception_occurred())
+      printf("Exception occured in get_state: %s \n", jl_typeof_str(jl_exception_occurred()));
     jl_array_t *target_array = (jl_array_t*)target;
     double *target_data = (double*)jl_array_data(target_array);
 
     jl_value_t *wheel_speed_cmd = jl_call3(get_action,controller,(jl_value_t*)state_vec,t);
+    if (jl_exception_occurred()){
+      printf("Exception occured in get_action: %s \n", jl_typeof_str(jl_exception_occurred()));
+      printf("Robot %s\n",robot_name);
+      printf("t: %f\n", wb_robot_get_time());
+      printf("gps_values: x=%f, y=%f, z=%f\n", gps_values[0], gps_values[1], gps_values[2]);
+      printf("imu_values: pitch=%f, roll=%f, yaw=%f\n", imu_values[0], imu_values[1], imu_values[2]);
+      printf("target: x=%f, y=%f, theta=%f\n", target_data[0], target_data[1], target_data[2]);
+      printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
+      // printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
+    }
     jl_array_t *wheel_speed_cmd_array = (jl_array_t*)wheel_speed_cmd;
     double *wheel_speed_cmd_data = (double*)jl_array_data(wheel_speed_cmd_array);
 
@@ -204,6 +222,7 @@ int main(int argc, char **argv) {
       // and change randomly the led colors
       // if (wb_robot_get_time() - display_counter > display_rate) {
         // display_counter = wb_robot_get_time();
+        // printf("Robot %s\n",robot_name);
         // printf("t: %f\n", wb_robot_get_time());
         // printf("gps_values: x=%f, y=%f, z=%f\n", gps_values[0], gps_values[1], gps_values[2]);
         // printf("imu_values: pitch=%f, roll=%f, yaw=%f\n", imu_values[0], imu_values[1], imu_values[2]);
