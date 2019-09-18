@@ -89,6 +89,8 @@ int main(int argc, char **argv) {
   Julia stuff
   */
   jl_init();
+  jl_eval_string("using Pkg");
+  jl_eval_string("Pkg.activate(joinpath(Pkg.devdir(),\"WebotsSim\"))");
   jl_eval_string("using Vec");
   jl_eval_string("using GridWorldPathFollowing");
   jl_eval_string("GridWorldPathFollowing.warmup()");
@@ -200,15 +202,15 @@ int main(int argc, char **argv) {
 
       // display some sensor data every second
       // and change randomly the led colors
-      if (wb_robot_get_time() - display_counter > display_rate) {
-        display_counter = wb_robot_get_time();
-        printf("t: %f\n", wb_robot_get_time());
-        printf("gps_values: x=%f, y=%f, z=%f\n", gps_values[0], gps_values[1], gps_values[2]);
-        printf("imu_values: pitch=%f, roll=%f, yaw=%f\n", imu_values[0], imu_values[1], imu_values[2]);
-        printf("target: x=%f, y=%f, theta=%f\n", target_data[0], target_data[1], target_data[2]);
-        printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
-        printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
-      }
+      // if (wb_robot_get_time() - display_counter > display_rate) {
+        // display_counter = wb_robot_get_time();
+        // printf("t: %f\n", wb_robot_get_time());
+        // printf("gps_values: x=%f, y=%f, z=%f\n", gps_values[0], gps_values[1], gps_values[2]);
+        // printf("imu_values: pitch=%f, roll=%f, yaw=%f\n", imu_values[0], imu_values[1], imu_values[2]);
+        // printf("target: x=%f, y=%f, theta=%f\n", target_data[0], target_data[1], target_data[2]);
+        // printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
+        // printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
+      // }
     wb_motor_set_velocity(left_motor, wheel_speed_cmd_data[0]);
     wb_motor_set_velocity(right_motor, wheel_speed_cmd_data[1]);
   };
