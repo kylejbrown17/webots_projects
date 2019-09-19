@@ -180,7 +180,7 @@ int main(int argc, char **argv) {
   double display_rate = 1.0; // print sensor and other information every `display_rate` seconds
 
   // Disable Garbage Collector
-  jl_gc_enable(0); 
+  jl_gc_enable(0);
   // main loop
   while (wb_robot_step(time_step) != -1) {
 
@@ -195,25 +195,27 @@ int main(int argc, char **argv) {
       };
 
     // get controller command
-    jl_array_t *state_vec = jl_ptr_to_array_1d(state_type, state, 3, 0);
+    // jl_array_t *state_vec = jl_ptr_to_array_1d(state_type, state, 3, 0);
+    jl_value_t *state_vec = (jl_value_t*)jl_ptr_to_array_1d(state_type, state, 3, 0);
     jl_value_t *t = jl_box_float64(wb_robot_get_time());
     if (jl_exception_occurred())
       printf("Exception occured: %s \n", jl_typeof_str(jl_exception_occurred()));
 
-    jl_value_t *target = jl_call3(get_state,model,traj,t);
-    if (jl_exception_occurred())
-      printf("Exception occured in get_state: %s \n", jl_typeof_str(jl_exception_occurred()));
-    jl_array_t *target_array = (jl_array_t*)target;
-    double *target_data = (double*)jl_array_data(target_array);
+    // jl_value_t *target = jl_call3(get_state,model,traj,t);
+    // if (jl_exception_occurred())
+      // printf("Exception occured in get_state: %s \n", jl_typeof_str(jl_exception_occurred()));
+    // jl_array_t *target_array = (jl_array_t*)target;
+    // double *target_data = (double*)jl_array_data(target_array);
 
-    jl_value_t *wheel_speed_cmd = jl_call3(get_action,controller,(jl_value_t*)state_vec,t);
+    // jl_value_t *wheel_speed_cmd = jl_call3(get_action,controller,(jl_value_t*)state_vec,t);
+    jl_value_t *wheel_speed_cmd = jl_call3(get_action,controller,state_vec,t);
     if (jl_exception_occurred()){
       printf("Exception occured in get_action: %s \n", jl_typeof_str(jl_exception_occurred()));
       printf("Robot %s\n",robot_name);
       printf("t: %f\n", wb_robot_get_time());
       printf("gps_values: x=%f, y=%f, z=%f\n", gps_values[0], gps_values[1], gps_values[2]);
       printf("imu_values: pitch=%f, roll=%f, yaw=%f\n", imu_values[0], imu_values[1], imu_values[2]);
-      printf("target: x=%f, y=%f, theta=%f\n", target_data[0], target_data[1], target_data[2]);
+      // printf("target: x=%f, y=%f, theta=%f\n", target_data[0], target_data[1], target_data[2]);
       printf("state: x=%f, y=%f, theta=%f\n", state[0], state[1], state[2]);
       // printf("cmd: v_left=%f, v_right=%f\n", wheel_speed_cmd_data[0], wheel_speed_cmd_data[1]);
     }

@@ -1,0 +1,33 @@
+Webots Project File version R2019b
+perspectives: 000000ff00000000fd00000003000000000000000000000000fc0100000001fb0000001a0044006f00630075006d0065006e0074006100740069006f006e0000000000ffffffff0000006900ffffff0000000100000175000002d3fc0200000001fb0000001400540065007800740045006400690074006f00720100000000000002d30000008900ffffff000000030000073f00000135fc0100000001fb0000000e0043006f006e0073006f006c006501000000000000073f0000006900ffffff000005c8000002d300000001000000020000000100000008fc00000000
+simulationViewPerspectives: 000000ff000000010000000200000000000005c60100000002010000000100
+sceneTreePerspectives: 000000ff0000000100000002000000c0000000fa0100000002010000000200
+maximizedDockId: -1
+centralWidgetVisible: 1
+selectionDisabled: 0
+viewpointLocked: 0
+orthographicViewHeight: 1
+textFiles: 1 "controllers/grid_world_controller/grid_world_controller.c" "worlds/world96.wbt"
+renderingDevicePerspectives: ROBOT_1:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_4:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_18:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_9:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_8:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_3:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_12:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_5:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_17:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_13:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_7:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_16:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_15:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_19:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_20:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_11:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_14:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_2:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_10:camera;0;0.933511;0;0
+renderingDevicePerspectives: ROBOT_6:camera;0;0.933511;0;0
+x3dExport-shadowBias: 0
+x3dExport-shadowMapSize: 2048
+x3dExport-shadowRadius: 0

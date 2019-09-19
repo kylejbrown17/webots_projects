@@ -7,7 +7,7 @@ centralWidgetVisible: 1
 selectionDisabled: 0
 viewpointLocked: 0
 orthographicViewHeight: 1
-textFiles: 0 "controllers/grid_world_controller/grid_world_controller.c" "worlds/world134.wbt"
+textFiles: 1 "controllers/grid_world_controller/grid_world_controller.c" "worlds/world134.wbt"
 renderingDevicePerspectives: ROBOT_8:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_3:camera;0;0.933511;0;0
 renderingDevicePerspectives: ROBOT_6:camera;0;0.933511;0;0
