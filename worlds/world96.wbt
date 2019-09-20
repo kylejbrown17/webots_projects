@@ -7,345 +7,355 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.23432830709410452 -0.9556697747430919 -0.17828495768543953 1.3173319349974433
-  position -12.942315423427608 7.287879535004292 11.01400023171173
+  orientation -0.2514028054641984 -0.9514230254138791 -0.17773816730525704 1.2505797511612573
+  position -6.38481590442532 3.3910681515330605 6.119176493733747
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 RectangleArena {
-  translation 3.125000 0 3.125000
-  floorSize 6.500000 6.500000
-  floorTileSize 0.250000 0.250000
-  floorAppearance ChequeredParquetry {
+  translation 3.125 0 3.125
+  floorSize 6.5 6.5
+  floorTileSize 0.25 0.25
+  floorAppearance Appearance {
+    material Material {
+      diffuseColor 0.6 0.6 0.6
+      emissiveColor 0.2 0.2 0.2
+      shininess 0.4
+    }
+    texture ImageTexture {
+      url [
+        "textures/floor.png"
+      ]
+    }
     textureTransform TextureTransform {
-      scale 0.5 0.5
+      scale 0.038462 0.038462
     }
   }
 }
 WoodenBox {
-  translation 0.750000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 0.75
   name "wooden box 1"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 0.75
   name "wooden box 2"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 0.75
   name "wooden box 3"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 0.75
   name "wooden box 4"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 0.75
   name "wooden box 5"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 0.75
   name "wooden box 6"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 0.75
   name "wooden box 7"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 0.750000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 0.75
   name "wooden box 8"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 1
   name "wooden box 9"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 1
   name "wooden box 10"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 1
   name "wooden box 11"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 1
   name "wooden box 12"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 1
   name "wooden box 13"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 1
   name "wooden box 14"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 1
   name "wooden box 15"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 1.000000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 1
   name "wooden box 16"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 2.25
   name "wooden box 17"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 2.25
   name "wooden box 18"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 2.25
   name "wooden box 19"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 2.25
   name "wooden box 20"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 2.25
   name "wooden box 21"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 2.25
   name "wooden box 22"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 2.25
   name "wooden box 23"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 2.250000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 2.25
   name "wooden box 24"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 2.5
   name "wooden box 25"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 2.5
   name "wooden box 26"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 2.5
   name "wooden box 27"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 2.5
   name "wooden box 28"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 2.5
   name "wooden box 29"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 2.5
   name "wooden box 30"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 2.5
   name "wooden box 31"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 2.500000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 2.5
   name "wooden box 32"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 3.75
   name "wooden box 33"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 3.75
   name "wooden box 34"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 3.75
   name "wooden box 35"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 3.75
   name "wooden box 36"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 3.75
   name "wooden box 37"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 3.75
   name "wooden box 38"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 3.75
   name "wooden box 39"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 3.750000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 3.75
   name "wooden box 40"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 4
   name "wooden box 41"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 4
   name "wooden box 42"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 4
   name "wooden box 43"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 4
   name "wooden box 44"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 4
   name "wooden box 45"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 4
   name "wooden box 46"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 4
   name "wooden box 47"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 4.000000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 4
   name "wooden box 48"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 5.25
   name "wooden box 49"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 5.25
   name "wooden box 50"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 5.25
   name "wooden box 51"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 5.25
   name "wooden box 52"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 5.25
   name "wooden box 53"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 5.25
   name "wooden box 54"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 5.25
   name "wooden box 55"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 5.250000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 5.25
   name "wooden box 56"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 0.750000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 0.75 0.0625 5.5
   name "wooden box 57"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 1.000000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 1 0.0625 5.5
   name "wooden box 58"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.250000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 2.25 0.0625 5.5
   name "wooden box 59"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 2.500000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 2.5 0.0625 5.5
   name "wooden box 60"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 3.750000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 3.75 0.0625 5.5
   name "wooden box 61"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 4.000000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 4 0.0625 5.5
   name "wooden box 62"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.250000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 5.25 0.0625 5.5
   name "wooden box 63"
+  size 0.25 0.125 0.25
 }
 WoodenBox {
-  translation 5.500000 0.062500 5.500000
-  size 0.250000 0.125000 0.250000
+  translation 5.5 0.0625 5.5
   name "wooden box 64"
+  size 0.25 0.125 0.25
 }
 DEF ROBOT_1 Khepera4 {
-  translation 1.750000 0 6.250000
+  translation 1.75 0 6.25
   rotation 0 1 0 6.283185
   name "ROBOT_1"
   controller "grid_world_controller"
@@ -360,7 +370,7 @@ DEF ROBOT_1 Khepera4 {
   ]
 }
 DEF ROBOT_2 Khepera4 {
-  translation 5.000000 0 0.500000
+  translation 5 0 0.5
   rotation 0 1 0 3.141593
   name "ROBOT_2"
   controller "grid_world_controller"
@@ -375,7 +385,7 @@ DEF ROBOT_2 Khepera4 {
   ]
 }
 DEF ROBOT_3 Khepera4 {
-  translation 1.750000 0 1.000000
+  translation 1.75 0 1
   rotation 0 1 0 6.283185
   name "ROBOT_3"
   controller "grid_world_controller"
@@ -390,7 +400,7 @@ DEF ROBOT_3 Khepera4 {
   ]
 }
 DEF ROBOT_4 Khepera4 {
-  translation 6.000000 0 1.500000
+  translation 6 0 1.5
   rotation 0 1 0 3.141593
   name "ROBOT_4"
   controller "grid_world_controller"
@@ -405,7 +415,7 @@ DEF ROBOT_4 Khepera4 {
   ]
 }
 DEF ROBOT_5 Khepera4 {
-  translation 4.500000 0 3.000000
+  translation 4.5 0 3
   rotation 0 1 0 1.570796
   name "ROBOT_5"
   controller "grid_world_controller"
@@ -420,7 +430,7 @@ DEF ROBOT_5 Khepera4 {
   ]
 }
 DEF ROBOT_6 Khepera4 {
-  translation 3.000000 0 4.000000
+  translation 3 0 4
   rotation 0 1 0 1.570796
   name "ROBOT_6"
   controller "grid_world_controller"
@@ -435,7 +445,7 @@ DEF ROBOT_6 Khepera4 {
   ]
 }
 DEF ROBOT_7 Khepera4 {
-  translation 0.750000 0 4.750000
+  translation 0.75 0 4.75
   rotation 0 1 0 6.283185
   name "ROBOT_7"
   controller "grid_world_controller"
@@ -450,7 +460,7 @@ DEF ROBOT_7 Khepera4 {
   ]
 }
 DEF ROBOT_8 Khepera4 {
-  translation 3.250000 0 0.250000
+  translation 3.25 0 0.25
   rotation 0 1 0 4.712389
   name "ROBOT_8"
   controller "grid_world_controller"
@@ -465,7 +475,7 @@ DEF ROBOT_8 Khepera4 {
   ]
 }
 DEF ROBOT_9 Khepera4 {
-  translation 0.250000 0 4.000000
+  translation 0.25 0 4
   rotation 0 1 0 6.283185
   name "ROBOT_9"
   controller "grid_world_controller"
@@ -480,7 +490,7 @@ DEF ROBOT_9 Khepera4 {
   ]
 }
 DEF ROBOT_10 Khepera4 {
-  translation 6.000000 0 5.750000
+  translation 6 0 5.75
   rotation 0 1 0 1.570796
   name "ROBOT_10"
   controller "grid_world_controller"
@@ -495,7 +505,7 @@ DEF ROBOT_10 Khepera4 {
   ]
 }
 DEF ROBOT_11 Khepera4 {
-  translation 5.250000 0 0.250000
+  translation 5.25 0 0.25
   rotation 0 1 0 1.570796
   name "ROBOT_11"
   controller "grid_world_controller"
@@ -510,7 +520,7 @@ DEF ROBOT_11 Khepera4 {
   ]
 }
 DEF ROBOT_12 Khepera4 {
-  translation 5.500000 0 3.250000
+  translation 5.5 0 3.25
   rotation 0 1 0 3.141593
   name "ROBOT_12"
   controller "grid_world_controller"
@@ -525,7 +535,7 @@ DEF ROBOT_12 Khepera4 {
   ]
 }
 DEF ROBOT_13 Khepera4 {
-  translation 5.000000 0 1.250000
+  translation 5 0 1.25
   rotation 0 1 0 6.283185
   name "ROBOT_13"
   controller "grid_world_controller"
@@ -540,7 +550,7 @@ DEF ROBOT_13 Khepera4 {
   ]
 }
 DEF ROBOT_14 Khepera4 {
-  translation 2.000000 0 4.750000
+  translation 2 0 4.75
   rotation 0 1 0 4.712389
   name "ROBOT_14"
   controller "grid_world_controller"
@@ -555,7 +565,7 @@ DEF ROBOT_14 Khepera4 {
   ]
 }
 DEF ROBOT_15 Khepera4 {
-  translation 1.500000 0 4.750000
+  translation 1.5 0 4.75
   rotation 0 1 0 1.570796
   name "ROBOT_15"
   controller "grid_world_controller"
@@ -570,7 +580,7 @@ DEF ROBOT_15 Khepera4 {
   ]
 }
 DEF ROBOT_16 Khepera4 {
-  translation 6.250000 0 1.000000
+  translation 6.25 0 1
   rotation 0 1 0 1.570796
   name "ROBOT_16"
   controller "grid_world_controller"
@@ -585,7 +595,7 @@ DEF ROBOT_16 Khepera4 {
   ]
 }
 DEF ROBOT_17 Khepera4 {
-  translation 6.250000 0 3.000000
+  translation 6.25 0 3
   rotation 0 1 0 3.141593
   name "ROBOT_17"
   controller "grid_world_controller"
@@ -600,7 +610,7 @@ DEF ROBOT_17 Khepera4 {
   ]
 }
 DEF ROBOT_18 Khepera4 {
-  translation 5.000000 0 3.250000
+  translation 5 0 3.25
   rotation 0 1 0 6.283185
   name "ROBOT_18"
   controller "grid_world_controller"
@@ -615,7 +625,7 @@ DEF ROBOT_18 Khepera4 {
   ]
 }
 DEF ROBOT_19 Khepera4 {
-  translation 2.750000 0 2.750000
+  translation 2.75 0 2.75
   rotation 0 1 0 4.712389
   name "ROBOT_19"
   controller "grid_world_controller"
@@ -630,7 +640,7 @@ DEF ROBOT_19 Khepera4 {
   ]
 }
 DEF ROBOT_20 Khepera4 {
-  translation 0.750000 0 3.250000
+  translation 0.75 0 3.25
   rotation 0 1 0 6.283185
   name "ROBOT_20"
   controller "grid_world_controller"

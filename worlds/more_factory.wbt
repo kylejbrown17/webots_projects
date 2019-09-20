@@ -1,0 +1,347 @@
+#VRML_SIM R2019b utf8
+WorldInfo {
+  basicTimeStep 16
+  contactProperties [
+    ContactProperties {
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.2096732020603745 -0.9658248251615958 -0.15237964247012237 1.2079023000542566
+  position -6.192875692040725 2.759995173956023 6.491621442427122
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation 3.125 0 3.125
+  floorSize 6.5 6.5
+  floorTileSize 0.25 0.25
+  floorAppearance BrushedAluminium {
+    textureTransform TextureTransform {
+      scale 5 5
+    }
+    IBLStrength 0.5
+  }
+}
+WoodenBox {
+  translation 0.75 0.0625 0.75
+  name "wooden box 1"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 0.75
+  name "wooden box 2"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 0.75
+  name "wooden box 3"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 0.75
+  name "wooden box 4"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 0.75
+  name "wooden box 5"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 0.75
+  name "wooden box 6"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 0.75
+  name "wooden box 7"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 0.75
+  name "wooden box 8"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 1
+  name "wooden box 9"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 1
+  name "wooden box 10"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 1
+  name "wooden box 11"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 1
+  name "wooden box 12"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 1
+  name "wooden box 13"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 1
+  name "wooden box 14"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 1
+  name "wooden box 15"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 1
+  name "wooden box 16"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 2.25
+  name "wooden box 17"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 2.25
+  name "wooden box 18"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 2.25
+  name "wooden box 19"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 2.25
+  name "wooden box 20"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 2.25
+  name "wooden box 21"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 2.25
+  name "wooden box 22"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 2.25
+  name "wooden box 23"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 2.25
+  name "wooden box 24"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 2.5
+  name "wooden box 25"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 2.5
+  name "wooden box 26"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 2.5
+  name "wooden box 27"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 2.5
+  name "wooden box 28"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 2.5
+  name "wooden box 29"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 2.5
+  name "wooden box 30"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 2.5
+  name "wooden box 31"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 2.5
+  name "wooden box 32"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 3.75
+  name "wooden box 33"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 3.75
+  name "wooden box 34"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 3.75
+  name "wooden box 35"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 3.75
+  name "wooden box 36"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 3.75
+  name "wooden box 37"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 3.75
+  name "wooden box 38"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 3.75
+  name "wooden box 39"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 3.75
+  name "wooden box 40"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 4
+  name "wooden box 41"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 4
+  name "wooden box 42"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 4
+  name "wooden box 43"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 4
+  name "wooden box 44"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 4
+  name "wooden box 45"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 4
+  name "wooden box 46"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 4
+  name "wooden box 47"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 4
+  name "wooden box 48"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 5.25
+  name "wooden box 49"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 5.25
+  name "wooden box 50"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 5.25
+  name "wooden box 51"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 5.25
+  name "wooden box 52"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 5.25
+  name "wooden box 53"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 5.25
+  name "wooden box 54"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 5.25
+  name "wooden box 55"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 5.25
+  name "wooden box 56"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 0.75 0.0625 5.5
+  name "wooden box 57"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 1 0.0625 5.5
+  name "wooden box 58"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.25 0.0625 5.5
+  name "wooden box 59"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 2.5 0.0625 5.5
+  name "wooden box 60"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 3.75 0.0625 5.5
+  name "wooden box 61"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 4 0.0625 5.5
+  name "wooden box 62"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.25 0.0625 5.5
+  name "wooden box 63"
+  size 0.25 0.125 0.25
+}
+WoodenBox {
+  translation 5.5 0.0625 5.5
+  name "wooden box 64"
+  size 0.25 0.125 0.25
+}
